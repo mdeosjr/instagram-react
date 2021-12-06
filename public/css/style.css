@@ -214,22 +214,25 @@ body {
 
 .sidebar {
   padding-top: 24px;
+}
+
+.sidebar div {
   position: sticky;
   top: 88px;
 }
 
-.sidebar > .usuario {
+.sidebar div > .usuario {
   display: flex;
   align-items: center;
 }
 
-.sidebar > .usuario img {
+.sidebar div > .usuario img {
   width: 56px;
   height: 56px;
   border-radius: 50%;
 }
 
-.sidebar > .usuario .texto {
+.sidebar div > .usuario .texto {
   display: flex;
   flex-direction: column;
   margin-left: 14px;
@@ -237,19 +240,19 @@ body {
   color: #8E8E8E;
 }
 
-.sidebar > .usuario .texto strong {
+.sidebar div > .usuario .texto strong, .nome {
   font-weight: 500;
   color: #262626;
 }
 
-.sidebar .sugestoes .titulo {
+.sidebar div .sugestoes .titulo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0 14px;
 }
 
-.sidebar .sugestoes .sugestao {
+.sidebar div .sugestoes .sugestao {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -258,28 +261,28 @@ body {
   margin-bottom: 16px;
 }
 
-.sidebar .sugestoes .sugestao .usuario {
+.sidebar div .sugestoes .sugestao .usuario {
   display: flex;
 }
 
-.sidebar .sugestoes img {
+.sidebar div .sugestoes img {
   width: 32px;
   height: 32px;
 }
 
-.sidebar .sugestoes .seguir {
+.sidebar div .sugestoes .seguir {
   color: #139EF2;
   font-weight: 600;
 }
 
-.sidebar .sugestoes .sugestao .usuario .texto {
+.sidebar div .sugestoes .sugestao .usuario .texto {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.sidebar .sugestoes .sugestao .usuario .texto :last-child {
+.sidebar div .sugestoes .sugestao .usuario .texto :last-child {
   color: #8E8E8E;
   font-weight: 400;
 }

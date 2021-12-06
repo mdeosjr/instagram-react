@@ -1,17 +1,9 @@
 export default function Post(props) {
     return (
         <div class="post">
-            <div class="topo">
-                <div class="usuario">
-                    <img src={props.topoImagem} />
-                    {props.topoNome}
-                </div>
-                <div class="acoes">
-                    <ion-icon name="ellipsis-horizontal"></ion-icon>
-                </div>
-            </div>
+            <Topo topoImagem={props.topoImagem} topoNome={props.topoNome}/>
             <div class="conteudo">
-              <img src={props.conteudoImagem} />
+              <img src={props.conteudoImagem} alt=""/>
             </div>
             <div class="fundo">
               <div class="acoes">
@@ -24,16 +16,35 @@ export default function Post(props) {
                   <ion-icon name="bookmark-outline"></ion-icon>
                 </div>
               </div>
-              <div class="curtidas">
-                <img src={props.fundoImagem} />
-                <div class="texto">
-                    Curtido por <strong>{props.fundoNome}</strong> e <strong>{props.fundoCurtidas}</strong>
-                </div>
-              </div>
+              <Curtidas fundoImagem={props.fundoImagem} fundoNome={props.fundoNome} fundoCurtidas={props.fundoCurtidas}/>
             </div>
         </div>
     )
 }
 
+function Topo(props) {
+  return (
+    <div class="topo">
+      <div class="usuario">
+        <img src={props.topoImagem} alt=""/>
+        {props.topoNome}
+      </div>
+      <div class="acoes">
+        <ion-icon name="ellipsis-horizontal"></ion-icon>
+      </div>
+    </div>
+  )
+}
+
+function Curtidas(props) {
+  return (
+    <div class="curtidas">
+      <img src={props.fundoImagem} alt=""/>
+        <div class="texto">
+          Curtido por <strong>{props.fundoNome}</strong> e <strong>{props.fundoCurtidas}</strong>
+        </div>
+    </div>
+  )
+}
 
 
